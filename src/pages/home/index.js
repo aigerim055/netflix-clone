@@ -12,8 +12,12 @@ const HomePage = () => {
         <>
             <section className={'main-section'}>
                 <Header/>
-                <div className="container">
-                    <MainTitle/>
+                <MainTitle/>
+
+            </section>
+            <section>
+                <div className="movies container">
+                    <h4>hello world</h4>
                 </div>
             </section>
         </>
