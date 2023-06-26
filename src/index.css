@@ -5,7 +5,6 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #000;
 }
 
 code {
@@ -17,7 +16,7 @@ code {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Cantarell, sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .header-container {
@@ -102,8 +101,134 @@ header {
 
 .movies {
     background: linear-gradient(333.08deg, #000235 10.2%, #010F42 35.93%, #E40913 111.25%);
-    padding: 3.5rem 0;
-    height: 1000px;
+    padding: 3.5rem ;
     border-radius: 20px;
     margin-top: -350px;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.movie-card img {
+    width: 100%;
+    max-height: 320px;
+}
+
+.movie-card {
+    color: white;
+    padding-bottom: 20px;
+}
+
+.filter-movies {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-movies button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    background: #0E2954;
+}
+
+
+.row {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.movie-card img:hover {
+    box-shadow: 1px 1px 12px 1px rgba(176,156,156,0.75);
+    cursor: pointer;
+}
+
+.movie-page {
+    color: #fff;
+}
+
+.movie-title {
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+
+    /*background: rgb(15,14,14);*/
+    /*background: linear-gradient(90deg, rgba(15,14,14,0.9822522759103641) 37%, rgba(0,0,0,0.16712622549019607) 66%);*/
+
+    /*background: rgb(0,0,0);*/
+    /*background: linear-gradient(82deg, rgba(0,0,0,1) 29%, rgba(0,0,0,0.0970982142857143) 67%);*/
+
+    /*background: rgb(24,24,24);*/
+    /*background: linear-gradient(83deg, rgba(24,24,24,1) 30%, rgba(24,24,24,0.3828125) 76%);*/
+    background:     linear-gradient(90deg,#181818 10%,hsla(0,0%,9%,.98) 20%,hsla(0,0%,9%,.97) 25%,hsla(0,0%,9%,.95) 35%,hsla(0,0%,9%,.94) 40%,hsla(0,0%,9%,.92) 45%,hsla(0,0%,9%,.9) 50%,hsla(0,0%,9%,.87) 55%,hsla(0,0%,9%,.82) 60%,hsla(0,0%,9%,.75) 65%,hsla(0,0%,9%,.63) 70%,hsla(0,0%,9%,.45) 75%,hsla(0,0%,9%,.27) 80%,hsla(0,0%,9%,.15) 85%,hsla(0,0%,9%,.08) 90%,hsla(0,0%,9%,.03) 95%,hsla(0,0%,9%,0));
+    height: 100%;
+
+    position: absolute;
+    width: 50%;
+}
+
+.movie-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.movie-background {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.home-page {
+    background: #000;
+}
+
+.header-color {
+    background: #000;
+}
+
+.movie-page {
+    background: #181818;
+    height: 100vh;
+}
+
+.movie-title {
+    padding: 170px 0 0 70px;
+    width: 60%;
+}
+
+.movie-title h1 {
+    padding-bottom: 30px;
+}
+
+.movie-desc {
+    display: flex;
+    gap: 10px;
+}
+
+.movie-overview {
+    width: 70%;
+    padding-top: 30px;
+    line-height: 25px;
+    word-spacing: 4px;
+}
+
+.rating svg {
+    width: 30px;
+}
+
+.youtube-btn:hover  {
+    color: #E50914;
+    cursor: pointer;
+}
+
+.movie-title a {
+    color: unset;
 }

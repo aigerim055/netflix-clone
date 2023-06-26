@@ -1,14 +1,14 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 
-const Header = () => {
+const Header = ({header}) => {
 
     const navigate = useNavigate()
 
 
     return (
         <>
-            <header>
+            <header className={header}>
                 <div className="header-container">
                     <div className="header">
                         <div
