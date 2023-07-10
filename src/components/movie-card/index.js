@@ -9,7 +9,7 @@ const MovieCard = ({img, id}) => {
     }
 
     return (
-        <div onClick={() => handleClick()} className={'movie-card'} >
+        <div onClick={() => handleClick()} className={`movie-card`} >
             <img  src={`https://image.tmdb.org/t/p/original${img}`} alt=""/>
         </div>
     );

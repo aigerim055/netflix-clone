@@ -46,7 +46,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-attachment: fixed;
     color: #fff;
 }
 
@@ -227,8 +227,27 @@ header {
 .youtube-btn:hover  {
     color: #E50914;
     cursor: pointer;
+    transition: 0.8s;
 }
 
 .movie-title a {
     color: unset;
+}
+
+.movie-desc-company {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-top: 20px;
+}
+
+.movie-desc-company img {
+    width: 100px;
+}
+
+.subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
 }

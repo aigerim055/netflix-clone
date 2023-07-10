@@ -23,7 +23,6 @@ const HomePage = () => {
             <section className={'main-section'}>
                 <Header header={'#000'}/>
                 <MainTitle/>
-
             </section>
             <section>
                 <div className="movies container">

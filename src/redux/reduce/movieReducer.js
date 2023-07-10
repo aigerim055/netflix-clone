@@ -3,6 +3,8 @@ const initialState = {
     popular_movies: [],
     movie: [],
     trailer: [],
+    reviews: [],
+    recommendations: [],
 }
 
 export default  function MovieReducer(state = initialState, action ) {
@@ -12,7 +14,11 @@ export default  function MovieReducer(state = initialState, action ) {
         case 'GET_MOVIE_BY_ID':
             return {...state, movie: action.payload}
         case 'GET_MOVIE_TRAILER_BY_ID':
-            return {...state, trailer:action.payload}
+            return {...state, trailer: action.payload}
+        case 'GET_REVIEWS_FOR_MOVIE':
+            return {...state, reviews: action.payload}
+        case 'GET_RECOMMENDATIONS_FOR_MOVIE':
+            return {...state, recommendations: action.payload}
         default:
             return state
     }
