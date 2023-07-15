@@ -5,6 +5,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #181818;
 }
 
 code {
@@ -101,7 +102,7 @@ header {
 
 .movies {
     background: linear-gradient(333.08deg, #000235 10.2%, #010F42 35.93%, #E40913 111.25%);
-    padding: 3.5rem ;
+    padding: 3.5rem 3.5rem 2.3rem 3.5rem;
     border-radius: 20px;
     margin-top: -350px;
     height: 100%;
@@ -196,7 +197,7 @@ header {
 
 .movie-page {
     background: #181818;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .movie-title {

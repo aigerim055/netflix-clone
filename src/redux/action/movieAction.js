@@ -45,3 +45,21 @@ export const getRecommendationsForMovie = (id) => {
             })
     }
 }
+
+export const getKeywordsForMovie = (id) => {
+    return (dispatch) => {
+        axios.get(`https://api.themoviedb.org/3/movie/${id}/keywords?api_key=2b45247853b02c34d915443548d8a9b5`)
+            .then(({data}) => {
+                dispatch({type: 'GET_KEYWORDS_FOR_MOVIE', payload: data.keyword})
+            })
+    }
+}
+
+export const getActorsForMovie = (id) => {
+    return (dispatch) => {
+        axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=2b45247853b02c34d915443548d8a9b5`)
+            .then(({data}) => {
+                dispatch({type: 'GET_ACTORS_FOR_MOVIE', payload: data.cast})
+            })
+    }
+}

@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import Header from "../../components/header";
 import { useDispatch, useSelector } from "react-redux";
 import {
+    getActorsForMovie,
     getMovieById,
     getMovieTrailerById,
     getRecommendationsForMovie,
@@ -11,27 +12,21 @@ import {
 import { CustomRating } from "../../components/rating";
 import YoutubeBtn from "../../components/youtubeButton";
 import Recommendations from "../../components/recommendations";
+import Actors from "../../components/actors";
 
 const MoviePage = () => {
     const dispatch = useDispatch()
-    const params = useParams()
+    const {id} = useParams()
     useEffect(() => {
-        dispatch(getMovieById(params.id))
-        dispatch(getMovieTrailerById(params.id))
-        dispatch(getReviewsForMovie(params.id))
-        dispatch(getRecommendationsForMovie(params.id))
-    }, [params.id])
+        dispatch(getMovieById(id))
+        dispatch(getMovieTrailerById(id))
+        dispatch(getReviewsForMovie(id))
+        dispatch(getRecommendationsForMovie(id))
+        dispatch(getActorsForMovie(id))
+    }, [dispatch, id])
 
     const movie = useSelector(state => state.movie)
     const youtube_link = useSelector(state => state.trailer)
-    const rec = useSelector(state => state.recommendations)
-
-    // const filter_logo = movie?.production_companies?.filter(el =>  el.logo_path )
-    // console.log(filter_logo)
-
-
-
-
 
     return (
         <>
@@ -65,9 +60,10 @@ const MoviePage = () => {
                             <CustomRating rating={movie.vote_average} />
                             <div className="movie-desc-company">
                                 {/*<img  src={`https://image.tmdb.org/t/p/original${filter_logo[0]?.logo_path}`} alt=""/>*/}
-                                <Link target={'_blank'} to={`https://www.youtube.com/watch?v=${youtube_link}`}>
-                                    <YoutubeBtn/>
-                                </Link>
+                                {/*<Link target={'_blank'} to={`https://www.youtube.com/watch?v=${youtube_link}`}>*/}
+                                {/*    <YoutubeBtn/>*/}
+                                {/*</Link>*/}
+                                <YoutubeBtn/>
                             </div>
                         </div>
                     </div>
@@ -76,6 +72,7 @@ const MoviePage = () => {
                 <section>
                     <div className="container">
                         <Recommendations/>
+                        <Actors/>
                     </div>
                 </section>
             </section>

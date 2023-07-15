@@ -4,6 +4,7 @@ import Header from "../../components/header";
 import {useDispatch, useSelector} from "react-redux";
 import MovieCard from "../../components/movie-card";
 import {getPopularMovies} from "../../redux/action/movieAction";
+import Footer from "../../components/footer";
 
 const HomePage = () => {
 
@@ -40,6 +41,7 @@ const HomePage = () => {
 
                 </div>
             </section>
+            {/*<Footer/>*/}
         </section>
     );
 };

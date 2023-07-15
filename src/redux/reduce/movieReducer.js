@@ -5,6 +5,8 @@ const initialState = {
     trailer: [],
     reviews: [],
     recommendations: [],
+    keywords: [],
+    actors: [],
 }
 
 export default  function MovieReducer(state = initialState, action ) {
@@ -19,6 +21,10 @@ export default  function MovieReducer(state = initialState, action ) {
             return {...state, reviews: action.payload}
         case 'GET_RECOMMENDATIONS_FOR_MOVIE':
             return {...state, recommendations: action.payload}
+        case 'GET_KEYWORDS_FOR_MOVIE':
+            return {...state, keywords: action.payload}
+        case 'GET_ACTORS_FOR_MOVIE':
+            return {...state, actors: action.payload.slice(0, 12)}
         default:
             return state
     }

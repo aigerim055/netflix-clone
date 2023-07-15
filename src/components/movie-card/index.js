@@ -6,6 +6,7 @@ const MovieCard = ({img, id}) => {
     const navigate = useNavigate()
     const handleClick = () => {
         navigate(`/movie/${id}`)
+        // console.log('hello')
     }
 
     return (
